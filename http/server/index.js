@@ -10,6 +10,7 @@ app.get('/', (req, res) => {
 
 app.get('/header', (req, res) => {
   console.log(req.get('Cookie'));
+  console.log(req.headers['b']);
   res.send('header!');
 });
 

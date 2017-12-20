@@ -5,7 +5,10 @@ var options = {
   port: 3000,
   path: '/header',
   method: 'GET',
-  headers: {'Cookie': 'myCookie=myvalue'}
+  headers: {
+    'Cookie': 'myCookie=myvalue',
+    'B': 'haha'
+  }
 };
 var results = ''; 
 var req = http.request(options, function(res) {

@@ -9,7 +9,9 @@ MongoClient.connect(url, function(err, db) {
         { _id: 155, name: 'Tasty Lemon'},
         { _id: 156, name: 'Vanilla Dream'}
     ];
-    db.collection("products").insertMany(myobj, function(err, res) {
+
+    var dbase = db.db("hi");
+    dbase.collection("products").insertMany(myobj, function(err, res) {
         if (err) throw err;
 
         console.log(res);
